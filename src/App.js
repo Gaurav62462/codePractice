@@ -12,7 +12,7 @@ const App = () => {
 
   const handleSubmit = async (code) => {
        const problem = problems[currentProblemIndex];
-    const testCases = problem.testCases; // Assume each problem has a testCases array
+    const testCases = problem.testCases;
     const result = await validateCode(code, testCases);
     setResults((prevResults) => [...prevResults, { problem: problem.title, result }]);
     setCurrentProblemIndex(currentProblemIndex + 1);
@@ -42,7 +42,6 @@ const App = () => {
   return (
     <div>
       <Progress current={currentProblemIndex} total={problems.length} />
-      {/* <Problem problem={problems[currentProblemIndex]} onSubmit={handleSubmit} /> */}
        <Problem problem={problems[currentProblemIndex]} onSubmit={handleSubmit} />;
 
     </div>

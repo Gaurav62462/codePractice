@@ -1,7 +1,7 @@
 export const validateCode = async (code, testCases) => {
     try {
       const results = await Promise.all(testCases.map(async (testCase) => {
-        const response = await fetch('https://api.jdoodle.com/v1/execute', {  // Use the proxy URL
+        const response = await fetch('https://api.jdoodle.com/v1/execute', { 
           method: 'POST',
           headers: { 'Content-Type': 'application/json' },
           body: JSON.stringify({
