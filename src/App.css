@@ -49,6 +49,23 @@ pre {
   color: #61dafb;
 }
 
+.snap-container {
+  display: flex;
+  overflow-x: auto;
+  width: 100vw;
+  height: 100vh;
+  scroll-snap-type: x mandatory;
+}
+
+.snap-item {
+  flex: 0 0 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  scroll-snap-align: start;
+  font-size: 2rem;
+}
+
 @keyframes App-logo-spin {
   from {
     transform: rotate(0deg);
